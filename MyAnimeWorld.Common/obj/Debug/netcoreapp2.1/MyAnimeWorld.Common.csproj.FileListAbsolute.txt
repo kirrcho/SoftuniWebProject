@@ -1,0 +1,12 @@
+C:\Users\KIRO\source\repos\MyAnimeWorld\MyAnimeWorld.Common\bin\Debug\netcoreapp2.1\MyAnimeWorld.Common.deps.json
+C:\Users\KIRO\source\repos\MyAnimeWorld\MyAnimeWorld.Common\bin\Debug\netcoreapp2.1\MyAnimeWorld.Common.dll
+C:\Users\KIRO\source\repos\MyAnimeWorld\MyAnimeWorld.Common\bin\Debug\netcoreapp2.1\MyAnimeWorld.Common.pdb
+C:\Users\KIRO\source\repos\MyAnimeWorld\MyAnimeWorld.Common\obj\Debug\netcoreapp2.1\MyAnimeWorld.Common.csproj.CoreCompileInputs.cache
+C:\Users\KIRO\source\repos\MyAnimeWorld\MyAnimeWorld.Common\obj\Debug\netcoreapp2.1\MyAnimeWorld.Common.AssemblyInfoInputs.cache
+C:\Users\KIRO\source\repos\MyAnimeWorld\MyAnimeWorld.Common\obj\Debug\netcoreapp2.1\MyAnimeWorld.Common.AssemblyInfo.cs
+C:\Users\KIRO\source\repos\MyAnimeWorld\MyAnimeWorld.Common\obj\Debug\netcoreapp2.1\MyAnimeWorld.Common.dll
+C:\Users\KIRO\source\repos\MyAnimeWorld\MyAnimeWorld.Common\obj\Debug\netcoreapp2.1\MyAnimeWorld.Common.pdb
+C:\Users\KIRO\source\repos\MyAnimeWorld\MyAnimeWorld.Common\obj\Debug\netcoreapp2.1\MyAnimeWorld.Common.csprojAssemblyReference.cache
+C:\Users\KIRO\source\repos\MyAnimeWorld\MyAnimeWorld.Common\bin\Debug\netcoreapp2.1\MyAnimeWorld.Models.dll
+C:\Users\KIRO\source\repos\MyAnimeWorld\MyAnimeWorld.Common\bin\Debug\netcoreapp2.1\MyAnimeWorld.Models.pdb
+C:\Users\KIRO\source\repos\MyAnimeWorld\MyAnimeWorld.Common\obj\Debug\netcoreapp2.1\MyAnimeWorld.Common.csproj.CopyComplete

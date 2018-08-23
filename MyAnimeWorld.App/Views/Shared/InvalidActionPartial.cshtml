@@ -1,0 +1,11 @@
+﻿@if (this.TempData.ContainsKey(ErrorConstants.Error_Key))
+{
+    <br />
+
+    <div class="alert alert-danger text-center">
+        @foreach (var error in this.TempData.Where(p => p.Key == ErrorConstants.Error_Key))
+        {
+            <b>@error.Value</b>
+        }
+    </div>
+}

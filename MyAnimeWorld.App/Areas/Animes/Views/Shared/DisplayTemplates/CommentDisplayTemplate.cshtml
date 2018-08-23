@@ -1,0 +1,44 @@
+﻿@model IEnumerable<CommentViewModel>
+
+<link href="~/css/Comment.css" rel="stylesheet" />
+
+@foreach (var comment in this.Model)
+{
+    <div class="comment-avatar col-md-10 col-sm-2 pr-1 d-inline-block">
+        <a href="/account/profile/@comment.Username"><img style="width:75px;height:90px" class="mx-auto rounded-circle img-fluid" src="@comment.AvatarUrl" alt="avatar"></a>
+    </div>
+    @if (this.User.IsInRole(DbConstants.Admin_Role))
+    {
+        <div class="d-inline-block">
+            <form asp-page-handler="deletecomment">
+                <input type="hidden" name="commentId" value="@comment.Id" />
+                <input type="button" class="btn btn-danger" value="Delete comment" data-toggle="modal" data-target="#myCommentModal"/>
+                <div class="modal fade" id="myCommentModal" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content danger">
+                            <div class="modal-header">
+                                <h4 class="modal-title">Delete comment</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p class="alert alert-danger">Are you sure you want to delete this comment?</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    }
+    <div class="comment-content col-md-11 col-sm-10">
+        <h4 class="small comment-meta"><a href="/account/profile/@comment.Username"><b>@comment.Username</b></a> <br /> <b>@comment.DateCreatedAt.ToLongDateString()</b></h4>
+        <div class="comment-body">
+            <p>
+                @comment.Content
+                <br>
+            </p>
+        </div>
+    </div>
+}

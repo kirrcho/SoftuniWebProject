@@ -1,0 +1,29 @@
+﻿@model DeleteAnimeSeriesViewModel
+
+<h3 class="text-danger">Are you sure you want to delete @this.Model.Title</h3>
+
+<br /> <br />
+
+@if (this.Model.EpisodesDeleted == 0)
+{
+    <h4 class="text-danger">This won't delete any episodes</h4>
+}
+else
+{
+    <h4 class="text-danger">
+        This will also delete @this.Model.EpisodesDeleted
+        @if (this.Model.EpisodesDeleted == 1)
+        {
+            @Html.Raw("episode")
+        }
+        else
+        {
+            @Html.Raw("episodes")
+        }
+        as well
+    </h4>
+}
+
+<form asp-area="admin" asp-controller="anime" asp-action="delete">
+    <input type="submit" class="btn btn-danger" value="Delete" />
+</form>

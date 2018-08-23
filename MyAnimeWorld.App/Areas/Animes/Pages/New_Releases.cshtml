@@ -1,0 +1,8 @@
+﻿@page "/animes/new-releases/{id?}"
+@model New_ReleasesModel
+@{
+}
+
+@Html.DisplayFor(p => p.ViewModel.Animes, "SearchResultDisplayTemplate")
+
+@Html.DisplayFor(p => p.ViewModel.Pagination, "PageSelectionViewModel")

@@ -1,0 +1,13 @@
+﻿@model Dictionary<int,int>
+
+@foreach (var episode in this.Model)
+{
+    <a href="/animes/watch/@episode.Value"
+       class="text-danger btn btn-outline-dark btn-warning" style="margin:0px 1.5% 0px 0px;width:105px">
+    Episode @(episode.Key)
+    </a>
+    @if (int.Parse(episode.Key.ToString()) % 6 == 0)
+    {
+        <br />
+    }
+}

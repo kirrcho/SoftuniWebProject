@@ -1,0 +1,55 @@
+﻿@model AnimeDetailsViewModel
+
+<br />
+
+<link href="~/css/Rating.css" rel="stylesheet" />
+
+<div class="row">
+    <div class="col-md-9"></div>
+    <div>
+        @if (this.User.IsInRole(DbConstants.Admin_Role))
+        {
+            <a href="/admin/addepisode/@this.Model.Id" class="btn btn-success">Add new episode</a>
+            <a href="/admin/deleteseries/@this.Model.Id" class="btn btn-danger">Delete anime</a>
+        }
+    </div>
+</div>
+
+<form asp-area="Animes" asp-controller="Anime" asp-action="Details" asp-route-id="@this.Model.Id">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="rating">
+                @Html.DisplayFor(p => p.Rating, "RatingDisplayTemplate")
+                <input type="hidden" name="rating" id="rating" value="@this.Model.Rating" />
+            </div>
+            <input type="submit" name="submitType" class="btn btn-success" value="Submit Rating" />
+        </div>
+    </div>
+
+    <br />
+    @if (this.Model.IsFavourite)
+    {
+        <input type="submit" name="submitType" class="btn btn-danger" value="Remove from Favourites" />
+    }
+    else
+    {
+        <input type="submit" name="submitType" class="btn btn-success" value="Add to Favourites" />
+    }
+
+</form>
+
+<table>
+    <tr>
+        <td style="width:25%;vertical-align:top">
+            <img src="@this.Model.ImageUrl" style="width:300px;height:360px" alt="Front image for @this.Model.ImageUrl" />
+        </td>
+        <td style="width:60%">
+            <h4>@this.Model.Title</h4>
+            <p>@this.Model.Description</p>
+            @Html.DisplayFor(p => p.Categories, "DetailsCategoriesDisplayTemplate")
+            <br />
+            <br />
+            @Html.DisplayFor(p => p.Episodes, "DetailsEpisodesDisplayTemplate")
+        </td>
+    </tr>
+</table>

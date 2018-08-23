@@ -1,0 +1,13 @@
+﻿@page "/account/favourites/{username}/{id?}"
+@model FavouritesModel
+@{
+}
+
+<h3>@(this.Model.Username)'s Favourite</h3>
+
+@Html.DisplayFor(p => p.ViewModel.Animes, "SearchResultDisplayTemplate")
+
+@if (this.Model.ViewModel.Animes.Any())
+{
+    @Html.DisplayFor(p => p.ViewModel.Pagination, "PageSelectionViewModel")
+}

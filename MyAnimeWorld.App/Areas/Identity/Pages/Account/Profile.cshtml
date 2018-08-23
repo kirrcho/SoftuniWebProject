@@ -1,0 +1,83 @@
+﻿@page "/account/profile/{username?}"
+@model ProfileModel
+@{
+}
+
+<div class="container-fluid">
+    <div>
+        <div class="row">
+            @if (this.User.FindFirst(ClaimTypes.NameIdentifier).Value == this.Model.UserId)
+            {
+                <div>
+                    <a class="btn btn-success" href="/identity/account/manage">Edit Profile</a>
+                </div>
+                <br />
+            }
+            <div class="col-md-9"></div>
+            @if (this.Model.IsAdmin && !this.Model.CurrentUserProfile)
+            {
+                <div>
+                    <form asp-area="identity" asp-route="/account/profile/@this.Model.Username">
+                        @if (!this.Model.IsBanned)
+                        {
+                            <input type="date" value="" asp-for="@this.Model.Ban" />
+                            <input type="button" data-toggle="modal" data-target="#myModal" class="btn btn-danger" value="BanUser" />
+                            <div class="modal fade" id="myModal" role="dialog">
+                                <div class="modal-dialog">
+                                    <div class="modal-content danger">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">Ban user</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p class="alert alert-danger">Are you sure you want to ban this user?</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="submit" class="btn btn-danger">Ban</button>
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        else
+                        {
+                            <input type="submit" asp-page-handler="unbanUser" class="btn btn-info" value="Unban User"/>
+                        }
+                    </form>
+                </div>
+            }
+        </div>
+        <div>
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">@this.Model.Username</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div align="center" class="col-md-1 col-sm-2 text-center pr-1">
+                            <img alt="User Pic" style="width:75px;height:90px" src="@this.Model.AvatarUrl" class="mx-auto rounded-circle img-fluid">
+                        </div>
+
+                        <div class=" col-md-9 col-lg-9 ">
+                            <table class="table table-user-information">
+                                <tbody>
+                                    <tr>
+                                        <td>Email:</td>
+                                        <td>@this.Model.Email</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Created at:</td>
+                                        <td>@this.Model.DateCreatedAt</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <a href="/account/favourites/@this.Model.Username" class="btn btn-primary">Favourites</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

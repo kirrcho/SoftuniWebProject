@@ -1,0 +1,20 @@
+﻿<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">Delete Episode</button>
+
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content danger">
+            <div class="modal-header">
+                <h4 class="modal-title">Delete episode</h4>
+            </div>
+            <div class="modal-body">
+                <p class="alert alert-danger">Are you sure you want to delete this episode?</p>
+            </div>
+            <div class="modal-footer">
+                <form asp-area="admin" asp-controller="anime" asp-action="deleteepisode">
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

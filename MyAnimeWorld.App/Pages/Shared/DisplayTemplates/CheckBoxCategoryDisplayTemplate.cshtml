@@ -1,0 +1,16 @@
+﻿@model IDictionary<int, string>
+
+@foreach (var category in this.Model)
+{
+    <div class="form-check form-check-inline">
+        @if (((ICollection<int>)this.ViewData["CheckedBoxes"])?.Contains(category.Key) ?? false)
+        {
+            <input checked class="form-check-input" type="checkbox" id="CategoriesIds" name="CategoriesIds" value="@category.Key">
+        }
+        else
+        {
+            <input class="form-check-input" type="checkbox" id="CategoriesIds" name="CategoriesIds" value="@category.Key">
+        }
+        <label class="form-check-label">@category.Value</label>
+    </div>
+}

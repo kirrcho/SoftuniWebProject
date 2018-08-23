@@ -1,0 +1,17 @@
+﻿@model PagedUsersViewModel
+
+<form asp-area="admin" asp-controller="users" asp-action="all">
+    <div class="form-group row">
+        <label for="searchTerm" class="form-inline col-sm-1">Search: </label>
+        <div class="col-sm-5">
+            <input type="text" class="form-control" name="searchTerm" id="searchTerm" value="@this.Model.SearchTerm" placeholder="Search an user..." />
+        </div>
+        <input type="submit" class="btn btn-success" value="Search"/>
+    </div>
+</form>
+
+<partial name="BorderedSectionPartial" />
+
+@Html.DisplayFor(p => p.Users, "UsersDisplayTemplate")
+
+@Html.DisplayFor(p => p.Pagination, "PageSelectionViewModel")

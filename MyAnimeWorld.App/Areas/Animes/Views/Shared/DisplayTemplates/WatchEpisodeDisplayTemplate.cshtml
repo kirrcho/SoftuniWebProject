@@ -1,0 +1,27 @@
+﻿@model WatchEpisodeViewModel
+
+<iframe id="video" style="width:686px;height:385.875px" src="@this.Model.Links.First(p => p.LinkSelected == true).Source" scrolling="no" frameborder="0"></iframe>
+
+<div class="row">
+    <div class="col-md-6">
+        @if (this.Model.PreviousEpisodeId != 0)
+        {
+            <a class="btn btn-outline-info" href="/animes/watch/@this.Model.PreviousEpisodeId">Previous episode</a>
+        }
+    </div>
+    @if (this.Model.NextEpisodeId != 0)
+    {
+        <a class="btn btn-outline-info" href="/animes/watch/@this.Model.NextEpisodeId">Next episode</a>
+    }
+</div>
+
+<br /> <br />
+<h4>Alternative Servers:</h4>
+@foreach (var link in this.Model.Links.OrderBy(p => p.LinkId))
+{
+    <div class="form-control col-4" style="background-color:ghostwhite">
+        <a href="/animes/watch/@(link.EpisodeId)?source=@link.LinkName">
+            <label class="col-form-label">@link.LinkName</label>
+        </a>
+    </div>
+}

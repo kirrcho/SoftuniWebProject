@@ -1,0 +1,57 @@
+﻿@page "/animes/watch/{id}/{handler?}"
+@model WatchModel
+@{
+}
+
+<link href="~/css/Rating.css" rel="stylesheet" />
+<br />
+<div class="row">
+    <h3 class="d-inline-block col-md-9">
+        <a asp-area="Animes" asp-action="Details" asp-controller="Anime" asp-route-id="@this.Model.AnimeSeriesId">@this.Model.Title</a> - Episode @this.Model.EpisodeNumber
+    </h3>
+    @if (this.Model.User.IsInRole(DbConstants.Admin_Role))
+    {
+        <div>
+            <a href="/admin/addepisode/@this.Model.AnimeSeriesId" class="btn btn-success">Add new episode</a>
+            <partial name="DeleteEpisodeModalPartial" />
+        </div>
+    }
+</div>
+
+<partial name="BorderedSectionPartial" />
+
+<form asp-page="/animes/watch/{id}" asp-route-id="@this.Model.EpisodeId">
+    <input type="hidden" asp-for="Source" value="@this.Model.SourceName" />
+    <div class="container-fluid">
+        <div class="row">
+            <div class="rating">
+                @Html.DisplayFor(p => p.Rating, "RatingDisplayTemplate")
+            </div>
+            <input type="submit" asp-page-handler="Ratings" class="btn btn-success" value="Submit Rating" />
+        </div>
+    </div>
+</form>
+
+<br />
+
+<form method="post" asp-page="/animes/watch/{id}" asp-route-id="@this.Model.EpisodeId">
+    <input type="hidden" asp-for="Source" value="@this.Model.SourceName" />
+    @if (this.Model.IsFavourite)
+    {
+        <input type="submit" asp-page-handler="Favourites" class="btn btn-danger" value="Remove from Favourites" />
+    }
+    else
+    {
+        <input type="submit" asp-page-handler="Favourites" class="btn btn-success" value="Add to Favourites" />
+    }
+</form>
+
+@Html.DisplayFor(p => p.WatchEpisodeViewModel, "WatchEpisodeDisplayTemplate")
+
+<partial name="BorderedSectionPartial" />
+
+@Html.EditorFor(p => p.CommentContent, "CommentEditorTemplate")
+
+<partial name="BorderedSectionPartial" />
+
+@Html.DisplayFor(p => p.Comments, "CommentDisplayTemplate")

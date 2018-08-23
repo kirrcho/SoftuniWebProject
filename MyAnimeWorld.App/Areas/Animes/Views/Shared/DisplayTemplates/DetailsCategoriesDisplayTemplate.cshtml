@@ -1,0 +1,7 @@
+﻿@model IEnumerable<string>
+
+<h5 class="d-inline" style="margin:0px 2% 0px 0px">Categories:</h5>
+@foreach (var category in this.Model)
+{
+    <a href="/categories/@category" class="border-dark col-1">@(category)</a>
+}

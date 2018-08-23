@@ -1,0 +1,21 @@
+﻿@model LinksViewModel
+
+@foreach (var link in this.Model.Links)
+{
+    <div class="form-group">
+        <label>Upload from @(link.Name)</label>
+        @if (this.Model.LinksAlreadyAdded.ContainsKey(link.Id))
+        {
+            <input type="text" class="form-control" id="Links" name="Links"
+                   value="@(this.Model.LinksAlreadyAdded[link.Id])" readonly />
+            <a class="btn btn-danger"
+               href="/admin/addepisode/20?handler=removelink&sourceId=@link.Id&animeSeriesId=@this.Model.AnimeSeriesId&episodeNumber=@this.Model.EpisodeNumber">
+                Remove Link
+            </a>
+        }
+        else
+        {
+            <input type="text" class="form-control" id="Links" name="Links" />
+        }
+    </div>
+}

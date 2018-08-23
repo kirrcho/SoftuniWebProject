@@ -1,0 +1,19 @@
+﻿@model IEnumerable<AnimeSeriesViewModel>
+
+<div class="container-fluid col-12">
+    @foreach (var result in this.Model)
+    {
+    <div class="card d-inline-block" style="width:24%">
+        <a asp-area="animes" asp-controller="anime" asp-action="Details" asp-route-id="@result.AnimeSeriesId">
+            <img class="card-img-top img-thumbnail" style="width:300px;height:360px" itemprop="image" src="@result.ImageUrl" alt="Card image cap">
+        </a>
+        <a href="/admin/addepisode/@result.AnimeSeriesId" class="btn btn-success">Add Episode</a>
+        <a href="/admin/addepisode/@result.AnimeSeriesId" class="btn btn-info ml-md-4">Finish Series</a>
+        <a asp-area="animes" asp-controller="anime" asp-action="Details" asp-route-id="@result.AnimeSeriesId">
+            <div class="card-body justify-content-center text-center" style="display:flex">
+                <p style="height:80px" class="card-title">@(result.Title)</p>
+            </div>
+        </a>
+    </div>
+    }
+</div>

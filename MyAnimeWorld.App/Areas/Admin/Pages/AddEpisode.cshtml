@@ -1,0 +1,76 @@
+﻿@page "/admin/addepisode/{id}"
+@model AddEpisodeModel
+@{
+}
+
+<h1 class="d-inline">Add or Edit Episode for @this.Model.Title</h1>
+<h3 class="d-inline">
+    <a asp-action="details" asp-controller="anime" asp-route-id="@this.Model.AnimeSeriesId" asp-route-area="animes">
+        (Details)
+    </a>
+</h3>
+<br />
+<br />
+<div class="row">
+    <div class="col-md-2">
+        @if (this.Model.EpisodeNumber != 1)
+        {
+            <a href="/admin/addepisode/@(this.Model.AnimeSeriesId)?episode=@(this.Model.EpisodeNumber - 1)" class="btn btn-success">
+                Previous episode
+            </a>
+        }
+    </div>
+    <div class="col-md-8">
+        @if (!this.Model.IsLastEpisode)
+        {
+            <a href="/admin/addepisode/@(this.Model.AnimeSeriesId)?episode=@(this.Model.EpisodeNumber + 1)" class="btn btn-success">
+                Next episode
+            </a>
+        }
+    </div>
+    @if (this.Model.User.IsInRole(DbConstants.Admin_Role) && !this.Model.IsLastEpisode)
+    {
+    <div>
+        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">Delete Episode</button>
+
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content danger">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Delete episode</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p class="alert alert-danger">Are you sure you want to delete this episode?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <form asp-area="admin" asp-controller="anime" asp-action="deleteepisode" asp-route-id="@this.Model.EpisodeId">
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </form>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    }
+</div>
+<table>
+    <tr>
+        <td style="width:25%">
+            <img src="@this.Model.ImageUrl" style="width:300px;height:360px" alt="Front image for @this.Model.ImageUrl" class="float-left" />
+        </td>
+        <td style="width:60%">
+            <form method="post">
+                <div class="form-group">
+                    <div asp-validation-summary="All" class="text-danger"></div>
+                    <label asp-for="EpisodeNumber">Episode</label>
+                    <input type="hidden" name="animeSeriesId" value="@this.Model.AnimeSeriesId" />
+                    <input type="hidden" name="episodeNumber" value="@this.Model.EpisodeNumber" />
+                    <input type="number" class="form-control" id="Title" name="Title" value="@this.Model.EpisodeNumber" disabled>
+                </div>
+                @Html.DisplayFor(p => p.LinksViewModel, "LinkSourcesDisplayTemplate")
+                <button type="submit" class="btn btn-success">Upload Links</button>
+            </form>
+        </td>
+    </tr>
+</table>

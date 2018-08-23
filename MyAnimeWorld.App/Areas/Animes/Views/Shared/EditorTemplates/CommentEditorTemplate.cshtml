@@ -1,0 +1,10 @@
+﻿@model string
+
+<div class="container" style="margin-bottom:40px">
+    <h5>Comments:</h5>
+    <form asp-route="/animes/watch/@this.ViewData["EpisodeId"].ToString()" method="post">
+        <span asp-validation-for="@this.Model" class="text-danger" style="font-size:20px"></span>
+        <textarea id="output" asp-for="@this.Model" class="form-control" placeholder="Submit a comment..."></textarea>
+        <button type="submit" class="btn btn-success float-right">Submit</button>
+    </form>
+</div>

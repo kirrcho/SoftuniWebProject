@@ -1,0 +1,17 @@
+﻿@page "/Categories"
+@model CategoriesModel
+@{
+}
+
+<div class="container">
+    @foreach (var category in this.Model.Categories)
+    {
+        <h3 class="panel">
+            Best of
+            <a asp-area="Categories" asp-action="Details" asp-controller="Category" asp-route-categoryName="@category.Name">
+                @category.Name
+            </a>
+        </h3>
+        @Html.DisplayFor(p => category.Animes, "SearchResultDisplayTemplate")
+    }
+</div>
