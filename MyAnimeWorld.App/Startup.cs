@@ -17,9 +17,9 @@ using MyAnimeWorld.Models;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using MyAnimeWorld.Common.Utilities.Emails;
-using MyAnimeWorld.Common.Utilities.Database;
 using MyAnimeWorld.Services;
 using AutoMapper;
+using MyAnimeWorld.Seed;
 
 namespace MyAnimeWorld.App
 {

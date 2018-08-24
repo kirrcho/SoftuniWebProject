@@ -14,8 +14,4 @@
     <ProjectReference Include="..\MyAnimeWorld.Models\MyAnimeWorld.Models.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Animes\BindingModels\" />
-  </ItemGroup>
-
 </Project>

@@ -33,8 +33,13 @@ using MyAnimeWorld.Common.Utilities.Constants;
 
 #line default
 #line hidden
+#line 5 "C:\Users\KIRO\source\repos\MyAnimeWorld\MyAnimeWorld.App\Views\_ViewImports.cshtml"
+using MyAnimeWorld.Common.Main.BindingModels;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"4adfac5793b14aef402eeaa2e7074c6534fa8bd9", @"/Views/Home/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"33d71df96d23e4c13b196faa4e6d829d1a5e2545", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"59425f4569f9df14d12dfd947a78081273c19cb6", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<PagedAnimesViewModel>
     {
         #pragma warning disable 1998

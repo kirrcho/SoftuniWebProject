@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using MyAnimeWorld.Common.Admin.BindingModels;
 using MyAnimeWorld.Common.Animes.ViewModels;
+using MyAnimeWorld.Common.Main.BindingModels;
 using MyAnimeWorld.Common.Main.ViewModels;
 using MyAnimeWorld.Models;
 using System;
@@ -20,6 +21,8 @@ namespace MyAnimeWorld.Common.Utilities.Mapper
                 .ForMember(p => p.Username, options => options.MapFrom(p => p.User.UserName))
                 .ForMember(p => p.Content, options => options.MapFrom(p => p.CommentContent))
                 .ForMember(p => p.AvatarUrl, options => options.MapFrom(p => p.User.AvatarUrl));
+            this.CreateMap<ComplaintBindingModel, Complaint>();
+            this.CreateMap<Complaint,ComplaintViewModel>();
         }
     }
 }

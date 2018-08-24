@@ -107,35 +107,29 @@ namespace MyAnimeWorld.App.Areas.Admin.Controllers
         {
             await this.AnimeService.DeleteSeries(id);
 
-            this.TempData["message"] = "Anime series deleted successfully";
+            this.TempData[SuccessConstants.Success_Key] = SuccessConstants.Successful_Deletion_Of_Anime_Series;
 
-            return this.Redirect("/admin/deleteseries/success");
+            return this.Redirect("/success");
         }
 
         [HttpPost]
         [Route("/admin/deleteepisode/{id}")]
         public async Task<IActionResult> DeleteEpisode(int id)
         {
-            await this.EpisodeService.DeleteEpisode(id);
-
-            this.TempData["message"] = "Episode deleted successfully";
-
-            return this.Redirect("/admin/deleteseries/success");
-        }
-
-        [HttpGet]
-        [Route("/admin/deleteseries/success")]
-        public IActionResult Success()
-        {
-            var message = this.TempData["message"];
-
-            if (message == null)
+            var episode = await this.EpisodeService.FindAsync(id);
+            if (episode == null || await this.EpisodeService.FindLastEpisodeNumberAsync(episode.AnimeSeriesId) != episode.EpisodeNumber)
             {
-                return NotFound();
+                this.TempData[ErrorConstants.Error_Key] = ErrorConstants.Invalid_Episode_Deletion;
+                return this.Redirect($"/animes/watch/{id}");
             }
 
-            return this.View(message);
+            await this.EpisodeService.DeleteEpisode(id);
+
+            this.TempData[SuccessConstants.Success_Key] = SuccessConstants.Successful_Deletion_Of_Anime_Episode;
+
+            return this.Redirect("/success");
         }
+
         private async Task LoadViewModelProperties(PagedAnimeSeriesViewModel viewModel, int page)
         {
             int pagesToLoad = (int)Math.Ceiling((double)await this.AnimeService.GetAllAnimesSeriesCountAsync() / NumericConstants.Number_Of_Animes_Per_Page);

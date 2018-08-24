@@ -76,7 +76,7 @@ using MyAnimeWorld.Common.Main.ViewModels;
             WriteLiteral("        <h3 class=\"panel\">\r\n            Best of\r\n            ");
             EndContext();
             BeginContext(201, 162, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4e1d3beea93d4510ab3e317e86fa3c4e", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3ef94bfdfb5f47e38829de7bbfa0a3fc", async() => {
                 BeginContext(313, 18, true);
                 WriteLiteral("\r\n                ");
                 EndContext();

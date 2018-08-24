@@ -85,7 +85,7 @@ using MyAnimeWorld.Common.Utilities.Constants;
             WriteLiteral("</h1>\r\n<h3 class=\"d-inline\">\r\n    ");
             EndContext();
             BeginContext(161, 141, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1ee965bd2a9642d192edf27379d8d156", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6ca94971523148638d0c797e062c634c", async() => {
                 BeginContext(273, 25, true);
                 WriteLiteral("\r\n        (Details)\r\n    ");
                 EndContext();
@@ -218,7 +218,7 @@ WriteAttributeValue("", 794, this.Model.EpisodeNumber + 1, 794, 31, false);
                         ");
             EndContext();
             BeginContext(1703, 233, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "58c9ace8fd244921a978913003def718", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "87687615b009413f8258666640671cf1", async() => {
                 BeginContext(1813, 116, true);
                 WriteLiteral("\r\n                            <button type=\"submit\" class=\"btn btn-danger\">Delete</button>\r\n                        ");
                 EndContext();
@@ -290,12 +290,12 @@ WriteAttributeValue(" ", 2308, this.Model.ImageUrl, 2309, 20, false);
             WriteLiteral(" class=\"float-left\" />\r\n        </td>\r\n        <td style=\"width:60%\">\r\n            ");
             EndContext();
             BeginContext(2413, 760, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "85fe2a638fed470c8a7a8df398d823ab", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7455fdc0841749d9b57916960fe1431e", async() => {
                 BeginContext(2433, 64, true);
                 WriteLiteral("\r\n                <div class=\"form-group\">\r\n                    ");
                 EndContext();
                 BeginContext(2497, 60, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("div", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "85ae0b0e75d24d3ab18c3d3389ef980b", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("div", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e15d3b5c975e4c68bf036add07eb23bf", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationSummaryTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.ValidationSummaryTagHelper>();
@@ -319,7 +319,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationSummaryTagHelper.ValidationSumma
                 WriteLiteral("\r\n                    ");
                 EndContext();
                 BeginContext(2579, 46, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("label", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ceb3a95bd8d7449ba8c906e00e02fac1", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("label", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8954a39707394ea3b2da16901df7d4c6", async() => {
                     BeginContext(2610, 7, true);
                     WriteLiteral("Episode");
                     EndContext();

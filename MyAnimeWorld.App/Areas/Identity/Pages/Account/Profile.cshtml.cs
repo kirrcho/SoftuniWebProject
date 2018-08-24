@@ -8,7 +8,6 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using MyAnimeWorld.Common.Users.BindingModels;
 using MyAnimeWorld.Common.Utilities.Constants;
 using MyAnimeWorld.Models;
 using MyAnimeWorld.Services;

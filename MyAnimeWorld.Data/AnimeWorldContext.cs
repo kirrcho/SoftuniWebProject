@@ -26,6 +26,8 @@ namespace MyAnimeWorld.Data
 
         public DbSet<Comment> Comments { get; set; }
 
+        public DbSet<Complaint> Complaints { get; set; }
+
         public AnimeWorldContext(DbContextOptions<AnimeWorldContext> options)
             :base(options)
         {

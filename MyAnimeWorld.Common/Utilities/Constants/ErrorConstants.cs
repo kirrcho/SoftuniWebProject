@@ -35,5 +35,17 @@ namespace MyAnimeWorld.Common.Utilities.Constants
         public const string Invalid_Banned_User_Login_Attempt = "User is banned!";
 
         public const string Invalid_Link_Deletion = "Episodes must have at least 1 link!";
+
+        public const string Invalid_Minimum_Complaint_Name = "Name must be at least 3 symbols.";
+
+        public const string Invalid_Maximum_Complaint_Name = "Name cannot be longer than 30 symbols.";
+
+        public const string Invalid_Minimum_Complaint_Message = "Message must be at least 5 symbols.";
+                                                      
+        public const string Invalid_Maximum_Complaint_Message = "Message cannot be longer than 350 symbols.";
+
+        public const string Invalid_Subject_Selection = "Please select a subject.";
+
+        public const string Invalid_Episode_Deletion = "In order to delete this episode you have to erase the episodes after it.";
     }
 }

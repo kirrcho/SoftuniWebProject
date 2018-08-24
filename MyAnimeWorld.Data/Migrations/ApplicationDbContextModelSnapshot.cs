@@ -263,6 +263,33 @@ namespace MyAnimeWorld.App.Data.Migrations
                     b.ToTable("Comments");
                 });
 
+            modelBuilder.Entity("MyAnimeWorld.Models.Complaint", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("DateCreatedAt");
+
+                    b.Property<string>("Email")
+                        .IsRequired();
+
+                    b.Property<string>("Message")
+                        .IsRequired()
+                        .HasMaxLength(350);
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(30);
+
+                    b.Property<string>("Subject")
+                        .IsRequired();
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Complaints");
+                });
+
             modelBuilder.Entity("MyAnimeWorld.Models.User", b =>
                 {
                     b.Property<string>("Id")

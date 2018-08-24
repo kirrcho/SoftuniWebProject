@@ -75,7 +75,7 @@ using MyAnimeWorld.Common.Utilities.Constants;
             WriteLiteral("\r\n<br />\r\n\r\n");
             EndContext();
             BeginContext(42, 49, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "2098764d777947cb920ea9273623b272", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "c772c4da300a4ab58641cd2c7450d8d6", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -133,7 +133,7 @@ WriteAttributeValue("", 369, this.Model.Id, 369, 14, false);
             WriteLiteral("    </div>\r\n</div>\r\n\r\n");
             EndContext();
             BeginContext(459, 814, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cbadd12b5d024ab1bd5cea0444865f67", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d0fdadfd71fd479c8634d7c4b0c5ac12", async() => {
                 BeginContext(557, 114, true);
                 WriteLiteral("\r\n    <div class=\"container-fluid\">\r\n        <div class=\"row\">\r\n            <div class=\"rating\">\r\n                ");
                 EndContext();

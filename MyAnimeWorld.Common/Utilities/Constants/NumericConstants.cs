@@ -10,6 +10,8 @@ namespace MyAnimeWorld.Common.Utilities.Constants
 
         public const int Number_Of_Users_Per_Page = 30;
 
+        public const int Number_Of_Complaints_Per_Page = 15;
+
         public const int Minimum_Search_Term_Length = 3;
 
         public const int Default_Animes_Number_For_Category = 4;
@@ -26,5 +28,14 @@ namespace MyAnimeWorld.Common.Utilities.Constants
         public const int Maximum_Title_Length = 35;
 
         public const int Minimum_Description_Length = 5;
+
+        public const int Minimum_Complaint_Name_Length = 3;
+
+        public const int Maximum_Complaint_Name_Length = 30;
+
+        public const int Minimum_Complaint_Message_Length = 5;
+
+        public const int Maximum_Complaint_Message_Length = 350;
+        //^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
     }
 }

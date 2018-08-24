@@ -103,7 +103,6 @@ C:\Users\KIRO\source\repos\MyAnimeWorld\MyAnimeWorld.App\obj\Debug\netcoreapp2.1
 C:\Users\KIRO\source\repos\MyAnimeWorld\MyAnimeWorld.App\obj\Debug\netcoreapp2.1\Razor\Areas\Animes\Pages\_ViewImports.g.cshtml.cs
 C:\Users\KIRO\source\repos\MyAnimeWorld\MyAnimeWorld.App\obj\Debug\netcoreapp2.1\Razor\Areas\Animes\Pages\_ViewStart.g.cshtml.cs
 C:\Users\KIRO\source\repos\MyAnimeWorld\MyAnimeWorld.App\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\DisplayTemplates\CategoryDisplayTemplate.g.cshtml.cs
-C:\Users\KIRO\source\repos\MyAnimeWorld\MyAnimeWorld.App\obj\Debug\netcoreapp2.1\Razor\Views\Shared\InvalidActionPartial.g.cshtml.cs
 C:\Users\KIRO\source\repos\MyAnimeWorld\MyAnimeWorld.App\obj\Debug\netcoreapp2.1\Razor\Views\Shared\NavigationBarPartial.g.cshtml.cs
 C:\Users\KIRO\source\repos\MyAnimeWorld\MyAnimeWorld.App\obj\Debug\netcoreapp2.1\Razor\Views\Shared\DisplayTemplates\PageSelectionViewModel.g.cshtml.cs
 C:\Users\KIRO\source\repos\MyAnimeWorld\MyAnimeWorld.App\obj\Debug\netcoreapp2.1\Razor\Views\Shared\BorderedSectionPartial.g.cshtml.cs
@@ -118,9 +117,13 @@ C:\Users\KIRO\source\repos\MyAnimeWorld\MyAnimeWorld.App\obj\Debug\netcoreapp2.1
 C:\Users\KIRO\source\repos\MyAnimeWorld\MyAnimeWorld.App\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Anime\Series.g.cshtml.cs
 C:\Users\KIRO\source\repos\MyAnimeWorld\MyAnimeWorld.App\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\DisplayTemplates\AdminAnimeSeriesDisplayTemplate.g.cshtml.cs
 C:\Users\KIRO\source\repos\MyAnimeWorld\MyAnimeWorld.App\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Anime\DeleteSeries.g.cshtml.cs
-C:\Users\KIRO\source\repos\MyAnimeWorld\MyAnimeWorld.App\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Anime\Success.g.cshtml.cs
 C:\Users\KIRO\source\repos\MyAnimeWorld\MyAnimeWorld.App\obj\Debug\netcoreapp2.1\Razor\Views\Shared\DeleteEpisodeModalPartial.g.cshtml.cs
 C:\Users\KIRO\source\repos\MyAnimeWorld\MyAnimeWorld.App\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\DisplayTemplates\UsersDisplayTemplate.g.cshtml.cs
 C:\Users\KIRO\source\repos\MyAnimeWorld\MyAnimeWorld.App\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Users\All.g.cshtml.cs
-C:\Users\KIRO\source\repos\MyAnimeWorld\MyAnimeWorld.App\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Shared\EditorTemplates\BanUserEditorTemplate.g.cshtml.cs
 C:\Users\KIRO\source\repos\MyAnimeWorld\MyAnimeWorld.App\obj\Debug\netcoreapp2.1\Razor\Views\Shared\FooterPartialView.g.cshtml.cs
+C:\Users\KIRO\source\repos\MyAnimeWorld\MyAnimeWorld.App\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contacts.g.cshtml.cs
+C:\Users\KIRO\source\repos\MyAnimeWorld\MyAnimeWorld.App\obj\Debug\netcoreapp2.1\Razor\Views\Home\Success.g.cshtml.cs
+C:\Users\KIRO\source\repos\MyAnimeWorld\MyAnimeWorld.App\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.g.cshtml.cs
+C:\Users\KIRO\source\repos\MyAnimeWorld\MyAnimeWorld.App\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\DisplayTemplates\ComplaintsDisplayTemplate.g.cshtml.cs
+C:\Users\KIRO\source\repos\MyAnimeWorld\MyAnimeWorld.App\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Users\Complaints.g.cshtml.cs
+C:\Users\KIRO\source\repos\MyAnimeWorld\MyAnimeWorld.App\obj\Debug\netcoreapp2.1\Razor\Views\Shared\ExecutedActionPartial.g.cshtml.cs

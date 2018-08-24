@@ -74,7 +74,7 @@ using MyAnimeWorld.Common.Users.ViewModels;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(30, 469, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "936af52e52484065b34a67e7b88f8ed2", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "44ae5187f53c431eb8d944050c25f48c", async() => {
                 BeginContext(93, 232, true);
                 WriteLiteral("\r\n    <div class=\"form-group row\">\r\n        <label for=\"searchTerm\" class=\"form-inline col-sm-1\">Search: </label>\r\n        <div class=\"col-sm-5\">\r\n            <input type=\"text\" class=\"form-control\" name=\"searchTerm\" id=\"searchTerm\"");
                 EndContext();
@@ -112,7 +112,7 @@ WriteAttributeValue("", 333, this.Model.SearchTerm, 333, 22, false);
             WriteLiteral("\r\n\r\n");
             EndContext();
             BeginContext(503, 41, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "7cbbc4b325fe47e9b2b2eb4d9fda4c10", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "7d3d12a695424b6ca33b85b759dc2cb8", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_TagHelpers_PartialTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.PartialTagHelper>();

@@ -12,7 +12,7 @@ using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyAnimeWorld.Common.Utilities.Database
+namespace MyAnimeWorld.Seed
 {
     public static class DatabaseSeed
     {
@@ -24,7 +24,8 @@ namespace MyAnimeWorld.Common.Utilities.Database
             new IdentityRole("User"),
         };
 
-        //ADMIN      Username = kireto, Password = pesho1
+        //ADMIN      Username = kireto, Password = kireto
+        //Warning! All users added in here will have a password "kireto" unless you change the current seed method
         public static User[] Users = new User[]
         {
             new User()
@@ -482,7 +483,7 @@ namespace MyAnimeWorld.Common.Utilities.Database
                 var account = await userManager.FindByNameAsync(user.UserName);
                 if (account == null)
                 {
-                    await userManager.CreateAsync(user,"pesho1");
+                    await userManager.CreateAsync(user, "kireto");
                     await userManager.AddToRolesAsync(user, new string[] { "Admin", "User" });
                     await userManager.AddToRoleAsync(user, "Admin");
                 }

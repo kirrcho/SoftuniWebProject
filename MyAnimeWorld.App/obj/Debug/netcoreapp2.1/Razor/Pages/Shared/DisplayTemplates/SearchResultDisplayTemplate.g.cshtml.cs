@@ -70,7 +70,7 @@ using MyAnimeWorld.Common.Main.ViewModels;
             WriteLiteral("        <div class=\"card d-inline-block\" style=\"width:24%\">\r\n            ");
             EndContext();
             BeginContext(203, 271, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "139e056f28c341e68f6640a95550d7b5", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ebc878ade9474ee2a6eccbd32db736f5", async() => {
                 BeginContext(305, 107, true);
                 WriteLiteral("\r\n                <img class=\"card-img-top img-thumbnail\" style=\"width:300px;height:360px\" itemprop=\"image\"");
                 EndContext();
@@ -119,7 +119,7 @@ WriteAttributeValue("", 417, result.ImageUrl, 417, 16, false);
             WriteLiteral("\r\n            ");
             EndContext();
             BeginContext(488, 324, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "abc8f5d295954f71b5edbab887a05b99", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ad94f052970946939131e5c50f2be543", async() => {
                 BeginContext(590, 161, true);
                 WriteLiteral("\r\n                <div class=\"card-body justify-content-center text-center\" style=\"display:flex\">\r\n                    <p style=\"height:80px\" class=\"card-title\">");
                 EndContext();

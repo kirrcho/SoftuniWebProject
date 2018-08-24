@@ -17,5 +17,7 @@ namespace MyAnimeWorld.Common.Utilities.Constants
         public const string Admin_AnimeSeries_Pagination = "/admin/series/";
 
         public const string Users_Pagination = "/users/all/";
+
+        public const string Complaints_Pagination = "/users/complaints/";
     }
 }

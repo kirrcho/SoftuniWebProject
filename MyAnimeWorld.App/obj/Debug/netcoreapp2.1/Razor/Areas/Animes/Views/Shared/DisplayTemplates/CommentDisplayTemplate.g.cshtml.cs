@@ -73,7 +73,7 @@ using MyAnimeWorld.Common.Utilities.Constants;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(40, 50, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "06cd630cf2b2411693b0eb8ab4498f85", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "3d18b5d85b8d439f9bc3b682fda2785b", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -131,7 +131,7 @@ WriteAttributeValue("", 343, comment.AvatarUrl, 343, 18, false);
             WriteLiteral("        <div class=\"d-inline-block\">\r\n            ");
             EndContext();
             BeginContext(505, 1215, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8e54f5b4a2d14fa8ac74913d0c32fb7f", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dd6730152dfa4e8492944bd33c61fe11", async() => {
                 BeginContext(544, 55, true);
                 WriteLiteral("\r\n                <input type=\"hidden\" name=\"commentId\"");
                 EndContext();

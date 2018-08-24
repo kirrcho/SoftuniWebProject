@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using MyAnimeWorld.Common.Main.ViewModels;
 using MyAnimeWorld.Common.Users.ViewModels;
 using MyAnimeWorld.Common.Utilities.Constants;
 using MyAnimeWorld.Services;
@@ -27,11 +28,11 @@ namespace MyAnimeWorld.App.Areas.Admin.Controllers
 
             if (id.HasValue && id > 0)
             {
-                await this.LoadViewModelProperties(viewModel, id.Value);
+                await this.LoadUsersViewModelProperties(viewModel, id.Value);
             }
             else
             {
-                await this.LoadViewModelProperties(viewModel, 1);
+                await this.LoadUsersViewModelProperties(viewModel, 1);
             }
 
             return this.View(viewModel);
@@ -45,11 +46,11 @@ namespace MyAnimeWorld.App.Areas.Admin.Controllers
 
             if (id.HasValue && id > 0)
             {
-                await this.LoadViewModelProperties(viewModel, id.Value);
+                await this.LoadUsersViewModelProperties(viewModel, id.Value);
             }
             else
             {
-                await this.LoadViewModelProperties(viewModel, 1);
+                await this.LoadUsersViewModelProperties(viewModel, 1);
             }
 
             if (searchTerm == null || searchTerm.Length <= NumericConstants.Minimum_Search_Term_Length)
@@ -65,7 +66,36 @@ namespace MyAnimeWorld.App.Areas.Admin.Controllers
             return this.View(viewModel);
         }
 
-        private async Task LoadViewModelProperties(PagedUsersViewModel viewModel, int page)
+        [HttpGet]
+        [Route("/users/complaints/{id?}")]
+        public async Task<IActionResult> Complaints(int? id)
+        {
+            var viewModel = new PagedComplaintsViewModel();
+
+            if (id.HasValue && id > 0)
+            {
+                await this.LoadComplaintsViewModelProperties(viewModel, id.Value);
+            }
+            else
+            {
+                await this.LoadComplaintsViewModelProperties(viewModel, 1);
+            }
+
+            return this.View(viewModel);
+        }
+
+        [HttpPost]
+        [Route("/admin/complaints/remove")]
+        public async Task<IActionResult> RemoveComplaint(int id)
+        {
+            await this.UserService.RemoveComplaint(id);
+
+            this.TempData[SuccessConstants.Successful_Action_Key] = SuccessConstants.Successful_Deletion_Of_Complaint;
+
+            return this.Redirect(UrlConstants.Complaints_Pagination);
+        }
+
+        private async Task LoadUsersViewModelProperties(PagedUsersViewModel viewModel, int page)
         {
             int pagesToLoad = (int)Math.Ceiling((double)await this.UserService.GetAllUsersCountAsync() / NumericConstants.Number_Of_Users_Per_Page);
 
@@ -77,6 +107,21 @@ namespace MyAnimeWorld.App.Areas.Admin.Controllers
             viewModel.Users = await this.UserService.GetUsersForPage(page);
             viewModel.Pagination.Pages = this.AnimeService.LoadPages(page, pagesToLoad);
             viewModel.Pagination.PageUrl = UrlConstants.Users_Pagination;
+            viewModel.Pagination.CurrentPage = page;
+        }
+
+        private async Task LoadComplaintsViewModelProperties(PagedComplaintsViewModel viewModel, int page)
+        {
+            int pagesToLoad = (int)Math.Ceiling((double)await this.UserService.GetAllComplaintsCountAsync() / NumericConstants.Number_Of_Complaints_Per_Page);
+
+            if (page > pagesToLoad)
+            {
+                page = pagesToLoad;
+            }
+
+            viewModel.Complaints = this.UserService.GetComplaintsForPage(page);
+            viewModel.Pagination.Pages = this.AnimeService.LoadPages(page, pagesToLoad);
+            viewModel.Pagination.PageUrl = UrlConstants.Complaints_Pagination;
             viewModel.Pagination.CurrentPage = page;
         }
     }

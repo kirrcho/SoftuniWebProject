@@ -152,7 +152,7 @@ namespace MyAnimeWorld.Services
         {
             var animesToSkip = NumericConstants.Number_Of_Animes_Per_Page * (pageNumber - 1);
 
-            if (!this.AnimeContext.UserRatedAnimes.Any(p => p.UserId == userId))
+            if (!this.AnimeContext.UserRatedAnimes.Any(p => p.UserId == userId && p.IsFavourite == true))
             {
                 return new List<AnimeSeriesViewModel>();
             }

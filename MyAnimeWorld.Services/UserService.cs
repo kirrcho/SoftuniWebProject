@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using MyAnimeWorld.Common.Main.BindingModels;
+using MyAnimeWorld.Common.Main.ViewModels;
 using MyAnimeWorld.Common.Users.ViewModels;
 using MyAnimeWorld.Common.Utilities.Constants;
 using MyAnimeWorld.Data;
@@ -128,6 +130,11 @@ namespace MyAnimeWorld.Services
         {
             var usersToSkip = NumericConstants.Number_Of_Users_Per_Page * (page - 1);
 
+            if (!this.AnimeContext.Users.Any())
+            {
+                return new List<UserViewModel>();
+            }
+
             var users = await this.AnimeContext.Users
                 .OrderByDescending(p => p.DateCreatedAt)
                 .Skip(usersToSkip)
@@ -141,9 +148,35 @@ namespace MyAnimeWorld.Services
             return users;
         }
 
+        public IEnumerable<ComplaintViewModel> GetComplaintsForPage(int page)
+        {
+            var complaintsToSkip = NumericConstants.Number_Of_Complaints_Per_Page * (page - 1);
+
+            if (!this.AnimeContext.Complaints.Any())
+            {
+                return new List<ComplaintViewModel>();
+            }
+
+            var complaints = this.AnimeContext.Complaints
+                .OrderByDescending(p => p.DateCreatedAt)
+                .Skip(complaintsToSkip)
+                .Take(NumericConstants.Number_Of_Complaints_Per_Page);
+
+            var model =  this.Mapper.Map<IEnumerable<ComplaintViewModel>>(complaints);
+
+            return model;
+        }
+
         public async Task<int> GetAllUsersCountAsync()
         {
             var cnt = await this.AnimeContext.Users.CountAsync();
+
+            return cnt;
+        }
+
+        public async Task<int> GetAllComplaintsCountAsync()
+        {
+            var cnt = await this.AnimeContext.Complaints.CountAsync();
 
             return cnt;
         }
@@ -172,6 +205,22 @@ namespace MyAnimeWorld.Services
             var comment = await this.AnimeContext.Comments.FindAsync(commentId);
 
             this.AnimeContext.Comments.Remove(comment);
+            await this.AnimeContext.SaveChangesAsync();
+        }
+
+        public async Task AddComplaint(ComplaintBindingModel complaintModel)
+        {
+            var complaint = this.Mapper.Map<Complaint>(complaintModel);
+
+            await this.AnimeContext.Complaints.AddAsync(complaint);
+            await this.AnimeContext.SaveChangesAsync();
+        }
+
+        public async Task RemoveComplaint(int complaintId)
+        {
+            var complaint = this.AnimeContext.Complaints.Find(complaintId);
+
+            this.AnimeContext.Complaints.Remove(complaint);
             await this.AnimeContext.SaveChangesAsync();
         }
     }

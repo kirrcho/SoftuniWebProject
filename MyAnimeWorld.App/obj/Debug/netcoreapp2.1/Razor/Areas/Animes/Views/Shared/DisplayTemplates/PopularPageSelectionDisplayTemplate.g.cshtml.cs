@@ -75,7 +75,7 @@ using MyAnimeWorld.Common.Utilities.Constants;
             WriteLiteral("\r\n<ul class=\"pagination\">\r\n    <li class=\"page-item\">\r\n        ");
             EndContext();
             BeginContext(93, 289, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9c99943eeb6547bf94124082f3c39ee3", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6995e5816bd541778a2a92812f8df4bf", async() => {
                 BeginContext(264, 114, true);
                 WriteLiteral("\r\n            <span aria-hidden=\"true\">&laquo;</span>\r\n            <span class=\"sr-only\">Previous</span>\r\n        ");
                 EndContext();
@@ -128,7 +128,7 @@ using MyAnimeWorld.Common.Utilities.Constants;
             WriteLiteral("            <li class=\"page-item\" style=\"width:40px\">\r\n                ");
             EndContext();
             BeginContext(601, 185, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dc1edf23f60e4c26b41fb4c235637198", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2ab78c4f145749d39efa2047b90c90e6", async() => {
                 BeginContext(731, 22, true);
                 WriteLiteral("\r\n                    ");
                 EndContext();
@@ -189,7 +189,7 @@ using MyAnimeWorld.Common.Utilities.Constants;
             WriteLiteral("            <li class=\"page-item\" style=\"width:40px\">\r\n                ");
             EndContext();
             BeginContext(914, 165, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8f2d87f09c7044cdadb73a24146d5c15", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "584625e99df0406c845466496e434bde", async() => {
                 BeginContext(1024, 22, true);
                 WriteLiteral("\r\n                    ");
                 EndContext();
@@ -248,7 +248,7 @@ using MyAnimeWorld.Common.Utilities.Constants;
             WriteLiteral("\r\n    <li class=\"page-item\">\r\n        ");
             EndContext();
             BeginContext(1156, 281, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6fc9b27879674c0f94d16c3b21e9e780", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "60eaf79a9e5f4319b65a1fcc6da1241e", async() => {
                 BeginContext(1323, 110, true);
                 WriteLiteral("\r\n            <span aria-hidden=\"true\">&raquo;</span>\r\n            <span class=\"sr-only\">Next</span>\r\n        ");
                 EndContext();
